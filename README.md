@@ -39,12 +39,12 @@ Interruptions:
 
 Architectures Standards:  
 * [Boucle Infinie](https://github.com/gkesse/Ready8051/tree/master/Boucle_Infinie "Boucle Infinie")  
-* [Boucle Infinie Amélioriée](https://github.com/gkesse/Ready8051/tree/master/Boucle Infinie "Boucle_Infinie_Amelioree")  
+* [Boucle Infinie Amélioriée](https://github.com/gkesse/Ready8051/tree/master/Boucle_Infinie_Amelioration "Boucle Infinie Amélioriée")  
 * [Machine à Etats Finis](https://github.com/gkesse/Ready8051/tree/master/Machine_Etat "Machine à Etats Finis")  
 
 Architectures RTOS:  
 * [Système d'Exploitation Embarqué Simple](https://github.com/gkesse/Ready8051/tree/master/Systeme_Exploitation_Embarque_Simple "Système d'Exploitation Embarqué Simple")  
-* [Ordonnanceur](https://github.com/gkesse/Ready8051/tree/master/Ordonnanceur "Ordonnanceur")  
+* [Ordonnanceur Multitâche Temps Réel](https://github.com/gkesse/Ready8051/tree/master/Ordonnanceur "Ordonnanceur")  
 * [Ordonnanceur Coopérative](https://github.com/gkesse/Ready8051/tree/master/Ordonnanceur_Cooperative "Ordonnanceur Coopérative")  
 * [Ordonnanceur Hybride](https://github.com/gkesse/Ready8051/tree/master/Bit "Bit")  
 
