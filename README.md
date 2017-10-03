@@ -88,20 +88,19 @@ Modules de Gestion de Sécurité Système:
 * [Chien de Garde Interne](https://github.com/gkesse/Ready8051/tree/master/Watchdog "Chien de Garde Interne")  
 * [Chien de Garde Externe](https://github.com/gkesse/Ready8051/tree/master/Watchdog_Externe "Chien de Garde Externe")  
 
+Exemples de Projet:
+* [Feux de Carrefour](https://github.com/gkesse/Ready8051/tree/master/Feux_Carrefour "Feux de Carrefour")  
+* [Phares de Voiture](https://github.com/gkesse/Ready8051/tree/master/Phares_Voiture "Phares de Voiture")  
+
 # Technologies
 
 Le développement de la bibliothèque **Ready8051** a nécessité les technologies suivantes :
 
 * Langage : **C**
-* Microcontrôleur 8051 : **AT89C52, INFINEON C515**
-* Microcontrôleur PIC : **PIC18F452**
-* Microprocesseur ARM : **LPC1769, LPC2148**
-* IDE 8051: **Keil µVision**
-* IDE PIC: **MPLab**
-* IDE ARM: **GNU ARM Eclipse**
+* Microcontrôleur 8051 : **AT89C52**
+* IDE & Compilateur 8051: **Keil µVision**
 * Compilateur 8051 : **SDDC**
+* Editeur de Texte : **Notepad++**
 * Simulateur de Circuit Electrique : **Proteus**
-* Protocoles : **RS232, I2C, SPI, CAN, USB, Bluetooth, WiFi**
-* Modules : **Switch , Button, Keypad, LED, 7-segment, LCD, PWD**
 * Architecture Logicielle : **TTA (Time Triggered Architecture)**
-* Cible : **8051, PIC, ARM**
+* Cibles : **8051, PIC, ARM**
