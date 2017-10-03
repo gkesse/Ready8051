@@ -48,18 +48,7 @@ Architectures RTOS:
 * [Ordonnanceur Coopérative](https://github.com/gkesse/Ready8051/tree/master/Ordonnanceur_Cooperative "Ordonnanceur Coopérative")  
 * [Ordonnanceur Hybride](https://github.com/gkesse/Ready8051/tree/master/Bit "Bit")  
 
-Périphériques d'Entrée:  
-* [Bouton Poussoir](https://github.com/gkesse/Ready8051/tree/master/Bouton "Bouton Poussoir")  
-* [Clavier Linéaire](https://github.com/gkesse/Ready8051/tree/master/Clavier "Clavier Linéaire")  
-* [Clavier Matriciel](https://github.com/gkesse/Ready8051/tree/master/Clavier_Matriciel "Clavier Matriciel")  
-
-Périphériques de Sortie:  
-* [Diode LED](https://github.com/gkesse/Ready8051/tree/master/LED "Diode LED")  
-* [Afficheur 7-segment](https://github.com/gkesse/Ready8051/tree/master/7Segment "Afficheur 7-segment")  
-* [Afficheur LCD Alphanumérique](https://github.com/gkesse/Ready8051/tree/master/LCD "Afficheur LCD Alphanumérique")  
-* [Afficheur LCD Graphique](https://github.com/gkesse/Ready8051/tree/master/LCD_Graphique "Afficheur LCD Graphique")  
-
-Protocoles:
+Protocoles de Communication:
 * [I2C](https://github.com/gkesse/Ready8051/tree/master/I2C "I2C")  
 * [UART](https://github.com/gkesse/Ready8051/tree/master/UART "UART")  
 * [SPI](https://github.com/gkesse/Ready8051/tree/master/SPI "SPI")  
@@ -68,6 +57,26 @@ Protocoles:
 * [ZigBee](https://github.com/gkesse/Ready8051/tree/master/ZigBee "ZigBee")  
 * [WiFi](https://github.com/gkesse/Ready8051/tree/master/WiFi "WiFi")  
 * [Ethernet](https://github.com/gkesse/Ready8051/tree/master/Ethernet "Ethernet")  
+
+Périphériques d'Entrée:  
+* [Bouton Poussoir](https://github.com/gkesse/Ready8051/tree/master/Bouton "Bouton Poussoir")  
+* [Clavier Linéaire](https://github.com/gkesse/Ready8051/tree/master/Clavier "Clavier Linéaire")  
+* [Clavier Matriciel](https://github.com/gkesse/Ready8051/tree/master/Clavier_Matriciel "Clavier Matriciel")  
+
+Périphériques de Sortie:  
+* [Diode LED](https://github.com/gkesse/Ready8051/tree/master/LED "Diode LED")  
+* [Diode RGB](https://github.com/gkesse/Ready8051/tree/master/RGB "Diode RGB")  
+* [Matrice de LED](https://github.com/gkesse/Ready8051/tree/master/LED_Matrice "Matrice de LED")  
+* [Afficheur 7-segment](https://github.com/gkesse/Ready8051/tree/master/7Segment "Afficheur 7-segment")  
+* [Afficheur LCD Alphanumérique](https://github.com/gkesse/Ready8051/tree/master/LCD "Afficheur LCD Alphanumérique")  
+* [Afficheur LCD Graphique](https://github.com/gkesse/Ready8051/tree/master/LCD_Graphique "Afficheur LCD Graphique")  
+
+Périphériques de Conversion:  
+* [Convertisseur Analogique Numérique](https://github.com/gkesse/Ready8051/tree/master/Convertisseur_CAN "Convertisseur Analogique Numérique")  
+* [Convertisseur Numérique Analogique](https://github.com/gkesse/Ready8051/tree/master/Convertisseur_CNA "Convertisseur Numérique Analogique")  
+
+Modules de Gestion:
+* [Modulation de Largeur d'Impulsion](https://github.com/gkesse/Ready8051/tree/master/MLI "Modulation de Largeur d'Impulsion")  
 
 # Technologies
 
