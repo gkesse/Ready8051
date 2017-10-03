@@ -22,7 +22,7 @@ cette architecture RTOS. Elle est portable sur plusieurs cibles de microcontrôle
 C'est une bibliothèque développée en C et maintenu par 
 [Gerard KESSE](http://5.48.215.193:8855/presentation/ "Accédez à mon site web (ReadyDev)").
 
-Bases:  
+Notions de Base:  
 * [Lecture et Ecriture sur un Port](https://github.com/gkesse/Ready8051/tree/master/Port "Lecture et Ecriture sur un Port")  
 * [Lecture et Ecriture sur un Bit](https://github.com/gkesse/Ready8051/tree/master/Bit "Lecture et Ecriture sur un Bit")  
 
@@ -78,13 +78,15 @@ Périphériques de Sortie:
 Périphériques de Conversion:  
 * [Convertisseur Analogique Numérique](https://github.com/gkesse/Ready8051/tree/master/Convertisseur "Convertisseur Analogique Numérique")  
 * [Convertisseur Numérique Analogique](https://github.com/gkesse/Ready8051/tree/master/Convertisseur_CNA "Convertisseur Numérique Analogique")  
+* [Convertisseur Tension Fréquence](https://github.com/gkesse/Ready8051/tree/master/Convertisseur_TF "Convertisseur Tension Fréquence")  
 
-Modules de Gestion:
+Modules de Gestion de Moteur:
 * [Modulation de Largeur d'Impulsion](https://github.com/gkesse/Ready8051/tree/master/MLI "Modulation de Largeur d'Impulsion")  
 
-Modules de Sécurité Système:
+Modules de Gestion de Sécurité Système:
 * [Timeout](https://github.com/gkesse/Ready8051/tree/master/Timeout "Timeout")  
-* [Chien de Garde](https://github.com/gkesse/Ready8051/tree/master/Watchdog "Chien de Garde")  
+* [Chien de Garde Interne](https://github.com/gkesse/Ready8051/tree/master/Watchdog "Chien de Garde Interne")  
+* [Chien de Garde Externe](https://github.com/gkesse/Ready8051/tree/master/Watchdog_Externe "Chien de Garde Externe")  
 
 # Technologies
 
