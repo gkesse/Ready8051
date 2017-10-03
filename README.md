@@ -26,13 +26,17 @@ Bases:
 * [Lecture et Ecriture sur un Port](https://github.com/gkesse/Ready8051/tree/master/Port "Lecture et Ecriture sur un Port")  
 * [Lecture et Ecriture sur un Bit](https://github.com/gkesse/Ready8051/tree/master/Bit "Lecture et Ecriture sur un Bit")  
 
-Délais:  
-* [Délai Logiciel](https://github.com/gkesse/Ready8051/tree/master/Delai "Délai Logiciel")  
+Délais Logiciels:  
+* [Délai Boucle For](https://github.com/gkesse/Ready8051/tree/master/Delai "Délai Boucle For")  
+* [Délai Boucle While](https://github.com/gkesse/Ready8051/tree/master/Delai_While "Délai Boucle While")  
+* [Délai Boucle Do While](https://github.com/gkesse/Ready8051/tree/master/Délai_Do_While "Délai Boucle Do While")  
+
+Délais Matériels:  
 * [Délai Timer T0](https://github.com/gkesse/Ready8051/tree/master/Délai_Timer_T0 "Délai Timer T0")  
 * [Délai Timer T1](https://github.com/gkesse/Ready8051/tree/master/Délai_Timer_T1 "Délai Timer T1")  
 * [Délai Timer T2](https://github.com/gkesse/Ready8051/tree/master/Délai_Timer_T2 "Délai Timer T2")  
 
-Interruptions:  
+Interruptions Timer:  
 * [Interruption Timer T0](https://github.com/gkesse/Ready8051/tree/master/Interruption_Timer_T0 "Interruption Timer T0")  
 * [Interruption Timer T1](https://github.com/gkesse/Ready8051/tree/master/Interruption_Timer_T1 "Interruption Timer T1")  
 * [Interruption Timer T2](https://github.com/gkesse/Ready8051/tree/master/Interruption_Timer_T2 "Interruption Timer T2")  
@@ -72,11 +76,15 @@ Périphériques de Sortie:
 * [Afficheur LCD Graphique](https://github.com/gkesse/Ready8051/tree/master/LCD_Graphique "Afficheur LCD Graphique")  
 
 Périphériques de Conversion:  
-* [Convertisseur Analogique Numérique](https://github.com/gkesse/Ready8051/tree/master/Convertisseur_CAN "Convertisseur Analogique Numérique")  
+* [Convertisseur Analogique Numérique](https://github.com/gkesse/Ready8051/tree/master/Convertisseur "Convertisseur Analogique Numérique")  
 * [Convertisseur Numérique Analogique](https://github.com/gkesse/Ready8051/tree/master/Convertisseur_CNA "Convertisseur Numérique Analogique")  
 
 Modules de Gestion:
 * [Modulation de Largeur d'Impulsion](https://github.com/gkesse/Ready8051/tree/master/MLI "Modulation de Largeur d'Impulsion")  
+
+Modules de Sécurité Système:
+* [Timeout](https://github.com/gkesse/Ready8051/tree/master/Timeout "Timeout")  
+* [Chien de Garde](https://github.com/gkesse/Ready8051/tree/master/Watchdog "Chien de Garde")  
 
 # Technologies
 
