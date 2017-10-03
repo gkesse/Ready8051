@@ -1,0 +1,51 @@
+<html>
+<body>
+<pre>
+<h1>µVision3 Build Log</h1>
+<h2>Project:</h2>
+C:\Users\TiaGerard\Programs\ZairStudio\EmbeddedSystem\Ready8051\Interruption_T2\keil\GProject.uv2
+Project File Date:  10/02/2017
+
+<h2>Output:</h2>
+Clean started: Project: 'GProject'
+   deleting intermediate output files for target 'Target 1'
+Build target 'Target 1'
+compiling main.c...
+compiling GDelay.c...
+compiling GLed.c...
+compiling GButton.c...
+compiling GInterrupt.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_GDELAY_MS?GDELAY
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GLED_INIT?GLED
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GLED_FLASH?GLED
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GTIMER_T0_INIT?GINTERRUPT
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GTIMER_T1_INIT?GINTERRUPT
+Program Size: data=12.4 xdata=0 code=580
+creating hex file from "GProject"...
+"GProject" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling GDelay.c...
+compiling GLed.c...
+compiling GButton.c...
+compiling GInterrupt.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_GDELAY_MS?GDELAY
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GLED_INIT?GLED
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GLED_FLASH?GLED
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GTIMER_T0_INIT?GINTERRUPT
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GTIMER_T1_INIT?GINTERRUPT
+Program Size: data=12.4 xdata=0 code=586
+creating hex file from "GProject"...
+"GProject" - 0 Error(s), 5 Warning(s).

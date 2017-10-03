@@ -1,0 +1,35 @@
+C51 COMPILER V8.12   MAIN                                                                  10/02/2017 00:03:51 PAGE 1   
+
+
+C51 COMPILER V8.12, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\main.obj
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE ..\src\main.c BROWSE INCDIR(..\..\lib) DEBUG OBJECTEXTEND PRINT(.\main.lst)
+                    - OBJECT(.\main.obj)
+
+line level    source
+
+   1          //===============================================
+   2          #include "GPort.h"
+   3          //===============================================
+   4          void main() {
+   5   1          GPort_Init();
+   6   1      
+   7   1              while(1) {
+   8   2                      GPort_Write(GPort_Read());
+   9   2              }
+  10   1      }
+  11          //===============================================
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     11    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

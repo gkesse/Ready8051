@@ -1,0 +1,40 @@
+C51 COMPILER V8.12   MAIN                                                                  10/02/2017 21:22:13 PAGE 1   
+
+
+C51 COMPILER V8.12, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\main.obj
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE ..\src\main.c BROWSE INCDIR(..\..\lib) DEBUG OBJECTEXTEND PRINT(.\main.lst)
+                    - OBJECT(.\main.obj)
+
+line level    source
+
+   1          //===============================================
+   2          #include "GSeos.h"
+   3          #include "GLed.h"
+   4          #include "GButton.h"
+   5          //===============================================
+   6          void main() {
+   7   1          GSeos_Init(10);
+   8   1          GLed_Init();
+   9   1              GButton_Init();
+  10   1          GSeos_Start();
+  11   1          
+  12   1              while(1) {
+  13   2                      GSeos_Go_To_Sleep();
+  14   2              }
+  15   1      }
+  16          //===============================================
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     19    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

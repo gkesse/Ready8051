@@ -1,0 +1,114 @@
+<html>
+<body>
+<pre>
+<h1>µVision3 Build Log</h1>
+<h2>Project:</h2>
+C:\Users\TiaGerard\Programs\ZairStudio\EmbeddedSystem\Ready8051\Delai_Timer\keil\GProject.uv2
+Project File Date:  10/02/2017
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling main.c...
+..\SRC\MAIN.C(10): warning C206: 'GDelay_T0_ms': missing function-prototype
+..\SRC\MAIN.C(10): error C267: 'GDelay_T0_ms': requires ANSI-style prototype
+compiling GLed.c...
+compiling GTimer.c...
+..\..\LIB\GTIMER.C(29): error C202: 'PRELOAD01': undefined identifier
+..\..\LIB\GTIMER.C(30): error C202: 'PRELOAD01': undefined identifier
+..\..\LIB\GTIMER.C(44): error C202: 'PRELOAD01': undefined identifier
+..\..\LIB\GTIMER.C(45): error C202: 'PRELOAD01': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+..\SRC\MAIN.C(10): warning C206: 'GDelay_T0_ms': missing function-prototype
+..\SRC\MAIN.C(10): error C267: 'GDelay_T0_ms': requires ANSI-style prototype
+compiling GLed.c...
+compiling GTimer.c...
+..\..\LIB\GTIMER.C(29): error C202: 'PRELOAD01': undefined identifier
+..\..\LIB\GTIMER.C(30): error C202: 'PRELOAD01': undefined identifier
+..\..\LIB\GTIMER.C(44): error C202: 'PRELOAD01': undefined identifier
+..\..\LIB\GTIMER.C(45): error C202: 'PRELOAD01': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+..\SRC\MAIN.C(10): warning C206: 'GDelay_T0_ms': missing function-prototype
+..\SRC\MAIN.C(10): error C267: 'GDelay_T0_ms': requires ANSI-style prototype
+compiling GLed.c...
+compiling GTimer.c...
+..\..\LIB\GTIMER.C(29): error C202: 'PRELOAD01': undefined identifier
+..\..\LIB\GTIMER.C(30): error C202: 'PRELOAD01': undefined identifier
+..\..\LIB\GTIMER.C(44): error C202: 'PRELOAD01': undefined identifier
+..\..\LIB\GTIMER.C(45): error C202: 'PRELOAD01': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+compiling GLed.c...
+compiling GTimer.c...
+..\..\LIB\GTIMER.C(29): error C202: 'PRELOAD01': undefined identifier
+..\..\LIB\GTIMER.C(30): error C202: 'PRELOAD01': undefined identifier
+..\..\LIB\GTIMER.C(44): error C202: 'PRELOAD01': undefined identifier
+..\..\LIB\GTIMER.C(45): error C202: 'PRELOAD01': undefined identifier
+Target not created
+Clean started: Project: 'GProject'
+   deleting intermediate output files for target 'Target 1'
+Build target 'Target 1'
+compiling main.c...
+compiling GLed.c...
+compiling GTimer.c...
+..\..\LIB\GTIMER.C(29): error C202: 'PRELOAD01': undefined identifier
+..\..\LIB\GTIMER.C(30): error C202: 'PRELOAD01': undefined identifier
+..\..\LIB\GTIMER.C(44): error C202: 'PRELOAD01': undefined identifier
+..\..\LIB\GTIMER.C(45): error C202: 'PRELOAD01': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+compiling GLed.c...
+compiling GTimer.c...
+..\..\LIB\GTIMER.C(29): error C202: 'PRELOAD01': undefined identifier
+..\..\LIB\GTIMER.C(30): error C202: 'PRELOAD01': undefined identifier
+..\..\LIB\GTIMER.C(44): error C202: 'PRELOAD01': undefined identifier
+..\..\LIB\GTIMER.C(45): error C202: 'PRELOAD01': undefined identifier
+Target not created
+compiling GTimer.c...
+..\..\LIB\GTIMER.C(29): error C202: 'PRELOAD01': undefined identifier
+..\..\LIB\GTIMER.C(30): error C202: 'PRELOAD01': undefined identifier
+..\..\LIB\GTIMER.C(44): error C202: 'PRELOAD01': undefined identifier
+..\..\LIB\GTIMER.C(45): error C202: 'PRELOAD01': undefined identifier
+..\..\lib\GTimer.c - 4 Error(s), 0 Warning(s).
+compiling GTimer.c...
+..\..\LIB\GTIMER.C(29): error C202: 'PRELOAD01': undefined identifier
+..\..\LIB\GTIMER.C(30): error C202: 'PRELOADLn': undefined identifier
+..\..\LIB\GTIMER.C(44): error C202: 'PRELOAD01': undefined identifier
+..\..\LIB\GTIMER.C(45): error C202: 'PRELOAD01': undefined identifier
+..\..\lib\GTimer.c - 4 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling GLed.c...
+compiling GTimer.c...
+..\..\LIB\GTIMER.C(29): error C202: 'PRELOAD01': undefined identifier
+..\..\LIB\GTIMER.C(30): error C202: 'PRELOAD01': undefined identifier
+..\..\LIB\GTIMER.C(44): error C202: 'PRELOAD01': undefined identifier
+..\..\LIB\GTIMER.C(45): error C202: 'PRELOAD01': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+compiling GLed.c...
+compiling GTimer.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?GTIMER_T1_INIT?GTIMER
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_GTIMER_T1_MS?GTIMER
+Program Size: data=9.1 xdata=0 code=139
+creating hex file from "GProject"...
+"GProject" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling GLed.c...
+compiling GTimer.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_GTIMER_T1_MS?GTIMER
+Program Size: data=9.1 xdata=0 code=139
+creating hex file from "GProject"...
+"GProject" - 0 Error(s), 1 Warning(s).
