@@ -18,7 +18,7 @@ Elle est construite autour de l'architecture TTA (Time Triggered Architecture),
 une architecture logicielle déclenchée par le temps et certifiée pour le développement 
 de systèmes de sécurité critique. Il suffit d'un Timer pour mettre en place 
 cette architecture RTOS. Elle est portable sur plusieurs cibles de microcontrôleurs 
-(8051, PIC) et de microprocesseurs (ARM).  
+(8051, PIC) et de microprocesseurs (ARM). 
 C'est une bibliothèque développée en C et maintenu par 
 [Gerard KESSE](http://5.48.215.193:8855/presentation/ "Accédez à mon site web (ReadyDev)").
 
