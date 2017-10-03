@@ -96,11 +96,11 @@ Exemples de Projet:
 
 Le développement de la bibliothèque **Ready8051** a nécessité les technologies suivantes :
 
-* Langage : **C**
-* Microcontrôleur 8051 : **AT89C52**
+* Langage: **C**
+* Microcontrôleur 8051: **AT89C52**
 * IDE & Compilateur 8051: **Keil µVision**
-* Compilateur 8051 : **SDDC**
-* Editeur de Texte : **Notepad++**
-* Simulateur de Circuit Electrique : **Proteus**
-* Architecture Logicielle : **TTA (Time Triggered Architecture)**
-* Cibles : **8051, PIC, ARM**
+* Compilateur 8051: **SDDC**
+* Editeur de Texte: **Notepad++**
+* Simulateur de Circuit Electrique: **Proteus**
+* Architecture Logicielle: **TTA (Time Triggered Architecture)**
+* Cibles: **8051, PIC, ARM**
