@@ -5,10 +5,8 @@
 //===============================================
 void main() {
     GSeos_Init(10);
-    
     GLed_Init();
 	GButton_Init();
-    
     GSeos_Start();
     
 	while(1) {

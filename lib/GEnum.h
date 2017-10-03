@@ -2,8 +2,8 @@
 #ifndef _GEnum_
 #define _GEnum_
 //===============================================
-enum GLight {RED, RED_AMBER, RED_RED_1, GREEN, AMBER, RED_RED_2};
-typedef enum GLight eGLight;
+enum eGLight {RED, RED_AMBER, RED_RED_1, GREEN, AMBER, RED_RED_2};
+typedef enum eGLight GLight;
 //===============================================
 #endif
 //===============================================

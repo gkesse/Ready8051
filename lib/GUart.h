@@ -1,15 +1,12 @@
 //===============================================
-#ifndef _GLed_
-#define _GLed_
+#ifndef _GUart_
+#define _GUart_
 //===============================================
 #include "GTypeDef.h"
 //===============================================
-void GLed_Init();
-void GLed_Flash();
-void GLed_Flash_Short();
-void GLed_Flash_Long();
-void GLed_Left_Right();
-void GLed_Left_Right_M2();
+void GUart_Init(const uint baud);
+void GUart_Char(const char d);
+void GUart_Str(const char* d);
 //===============================================
 #endif
 //===============================================

@@ -49,7 +49,7 @@ Architectures Standards:
 Architectures RTOS:  
 * [Système d'Exploitation Embarqué Simple](https://github.com/gkesse/Ready8051/tree/master/Systeme_Exploitation_Embarque_Simple "Système d'Exploitation Embarqué Simple")  
 * [Ordonnanceur Multitâche Temps Réel](https://github.com/gkesse/Ready8051/tree/master/Ordonnanceur "Ordonnanceur")  
-* [Ordonnanceur Coopérative](https://github.com/gkesse/Ready8051/tree/master/Ordonnanceur_Cooperative "Ordonnanceur Coopérative")  
+* [Ordonnanceur Coopératif](https://github.com/gkesse/Ready8051/tree/master/Ordonnanceur_Cooperatif "Ordonnanceur Coopératif")  
 * [Ordonnanceur Hybride](https://github.com/gkesse/Ready8051/tree/master/Bit "Bit")  
 
 Protocoles de Communication:

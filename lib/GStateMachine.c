@@ -3,8 +3,8 @@
 #include "GPortDef.h"
 #include "GEnum.h"
 //===============================================
-static eGLight gLight_State_L1;
-static eGLight gLight_State_L2;
+static GLight gLight_State_L1;
+static GLight gLight_State_L2;
 //===============================================
 static uint gState_Light_L2_Time;
 static uint gState_Light_L1_Time;
