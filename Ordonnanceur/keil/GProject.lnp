@@ -1,5 +1,0 @@
-".\main.obj",
-".\GStateMachine.obj",
-".\GSch.obj" 
-TO "GProject" 
-RAMSIZE(256) 

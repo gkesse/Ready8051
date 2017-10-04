@@ -1,6 +1,0 @@
-".\main.obj",
-".\GLed.obj",
-".\GButton.obj",
-".\GSeos.obj" 
-TO "GProject" 
-RAMSIZE(256) 

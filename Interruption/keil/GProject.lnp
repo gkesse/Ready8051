@@ -1,7 +1,0 @@
-".\main.obj",
-".\GDelay.obj",
-".\GLed.obj",
-".\GButton.obj",
-".\GInterrupt.obj" 
-TO "GProject" 
-RAMSIZE(256) 
