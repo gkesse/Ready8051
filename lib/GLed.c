@@ -45,15 +45,15 @@ void GLed_Flash_Short() {
     if(gLed_Lock == LOCKED) return;
     gLed_Lock = LOCKED;
 
-    HYBRID0 = LED_OFF;
+    HYBRID1 = LED_OFF;
 
     if(gLed_Flash_Short == LED_OFF) {
         gLed_Flash_Short = LED_ON;
-        HYBRID1 = LED_ON;
+        HYBRID0 = LED_ON;
     }
     else if(gLed_Flash_Short == LED_ON) {
         gLed_Flash_Short = LED_OFF;
-        HYBRID1 = LED_OFF;
+        HYBRID0 = LED_OFF;
     }
     
     gLed_Lock = UNLOCKED;
@@ -65,12 +65,12 @@ void GLed_Flash_Long() {
     if(gLed_Lock == LOCKED) return;
     gLed_Lock = LOCKED;
 
-    HYBRID1 = LED_OFF;
+    HYBRID0 = LED_OFF;
 
     for(i = 0; i < 4; i++) {
-        HYBRID0 = LED_ON;
+        HYBRID1 = LED_ON;
         GDelay_ms(200);
-        HYBRID0 = LED_OFF;
+        HYBRID1 = LED_OFF;
         GDelay_ms(200);
     }
     

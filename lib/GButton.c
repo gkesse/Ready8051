@@ -2,6 +2,8 @@
 #include "GButton.h"
 #include "GPortDef.h"
 //===============================================
+extern bit gUart_Button_Message_Flag;
+//===============================================
 bit gButton_Left;
 bit gButton_Right;
 bit gButton_Warning;
@@ -47,6 +49,7 @@ void GButton_Scan() {
         gButton_Right = BUTTON_OFF;
         gButton_Warning = BUTTON_OFF;
         gButton_Stop = BUTTON_OFF;
+		gUart_Button_Message_Flag = TRUE;
     }
     
     if(BUTTON1 == BUTTON_ON && gButton_Right_Flag == TRUE) {
@@ -56,6 +59,7 @@ void GButton_Scan() {
         gButton_Right = BUTTON_ON;
         gButton_Warning = BUTTON_OFF;
         gButton_Stop = BUTTON_OFF;
+		gUart_Button_Message_Flag = TRUE;
     }
 
     if(BUTTON2 == BUTTON_ON && gButton_Warning_Flag == TRUE) {
@@ -65,6 +69,7 @@ void GButton_Scan() {
         gButton_Right = BUTTON_OFF;
         gButton_Warning = BUTTON_ON;
         gButton_Stop = BUTTON_OFF;
+		gUart_Button_Message_Flag = TRUE;
     }
     
     if(BUTTON3 == BUTTON_ON && gButton_Stop_Flag == TRUE) {
@@ -74,11 +79,12 @@ void GButton_Scan() {
         gButton_Right = BUTTON_OFF;
         gButton_Warning = BUTTON_OFF;
         gButton_Stop = BUTTON_ON;
+		gUart_Button_Message_Flag = TRUE;
     }
 }
 //===============================================
 void GButton_Update() {    
-    if(++gButton_Update_Time != 30) return;
+    if(++gButton_Update_Time != 50) return;
     gButton_Update_Time = 0;
     
     gButton_Left_Flag = TRUE;

@@ -8,7 +8,7 @@ void main() {
     GLed_Init();
     
     GSch_Add_Task(GLed_Flash_Short, 0, 200, COOP);
-    GSch_Add_Task(GLed_Flash_Long, 1600, 1600, PREEMP);
+    GSch_Add_Task(GLed_Flash_Long, 1, 4000, PREEMP);
     
     GSch_Start();
     
