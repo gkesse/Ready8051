@@ -2,8 +2,9 @@
 #include "GSch.h"
 #include "GLedCoop.h"
 #include "GButton.h"
-#include "GUart.h"
-#include "GUartButton.h"
+#include "GUartBuffer.h"
+#include "GUartButtonBuffer.h"
+#include "GButton.h"
 //===============================================
 void main() {
     GSch_Init();
@@ -14,9 +15,10 @@ void main() {
 	GUart_Button_Init();
     
     GSch_Add_Task(GButton_Scan, 0, 10);
-    GSch_Add_Task(GButton_Update, 1, 10);
-    GSch_Add_Task(GLed_Left_Right, 3, 250);
-    GSch_Add_Task(GUart_Button_Message, 5, 250);
+    GSch_Add_Task(GButton_Update, 1, 5);
+    GSch_Add_Task(GUart_Update, 5, 10);
+    GSch_Add_Task(GLed_Left_Right, 7, 250);
+    GSch_Add_Task(GUart_Button_Message, 11, 250);
     
     GSch_Start();
     

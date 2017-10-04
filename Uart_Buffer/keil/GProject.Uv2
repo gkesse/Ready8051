@@ -9,8 +9,8 @@ File 1,1,<..\src\main.c><main.c>
 File 1,1,<..\..\lib\GSch.c><GSch.c>
 File 1,1,<..\..\lib\GButton.c><GButton.c>
 File 1,1,<..\..\lib\GLedCoop.c><GLedCoop.c>
-File 1,1,<..\..\lib\GUart.c><GUart.c>
-File 1,1,<..\..\lib\GUartButton.c><GUartButton.c>
+File 1,1,<..\..\lib\GUartBuffer.c><GUartBuffer.c>
+File 1,1,<..\..\lib\GUartButtonBuffer.c><GUartButtonBuffer.c>
 
 
 Options 1,0,0  // Target 'Target 1'

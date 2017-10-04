@@ -1,14 +1,11 @@
 //===============================================
-#ifndef _GUartBuffer_
-#define _GUartBuffer_
+#ifndef _GUartButtonBuffer_
+#define _GUartButtonBuffer_
 //===============================================
 #include "GTypeDef.h"
 //===============================================
-void GUart_Init(const uint baud);
-void GUart_Write_Char_Buffer(const char d);
-void GUart_Write_Str_Buffer(const char* d);
-char GUart_Read_Char();
-void GUart_Update();
+void GUart_Button_Init();
+void GUart_Button_Message();
 //===============================================
 #endif
 //===============================================

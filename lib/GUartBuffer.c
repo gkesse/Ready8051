@@ -4,14 +4,14 @@
 #include <string.h>
 //===============================================
 #define BS (0x08) // Backspace
-#define CR (0x0A) // Line Feed
+#define LF (0x0A) // Line Feed
 #define CR (0x0D) // Carriage Return
 //===============================================
 #define XON (0x11) // Device Control 1
 #define XOFF (0x13) // Device Control 3
 //===============================================
-#define WRITE_BUFFER_MAX (10)
-#define READ_BUFFER_MAX (10)
+#define WRITE_BUFFER_MAX (20)
+#define READ_BUFFER_MAX (4)
 //===============================================
 static char gUart_Write_Buffer[WRITE_BUFFER_MAX];
 static char gUart_Read_Buffer[READ_BUFFER_MAX];
@@ -25,11 +25,7 @@ static uchar gUart_Read_Wait;
 static bit gUart_Write_Error;
 static bit gUart_Read_Error;
 //===============================================
-void GUart_Write_Char_Buffer(const char d);
-void GUart_Write_Str_Buffer(const char* d);
 void GUart_Write_Char(const char d);
-char GUart_Read_Char();
-void GUart_Update();
 //===============================================
 void GUart_Init(const uint baud) {
     uint m_PRELOAD = (256 - (uchar)((((ulong)OSC_FREQ / 100) * 3125) / ((ulong)baud * OSC_PER_INST * 1000)));
@@ -76,7 +72,7 @@ void GUart_Write_Char(const char d) {
             do {
                 RI = 0;
                 while(RI == 0);
-            }while(SBUF != XON)
+            }while(SBUF != XON);
         }
         RI = 0;
     }
