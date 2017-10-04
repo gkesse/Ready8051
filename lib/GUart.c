@@ -3,9 +3,9 @@
 #include "GPortDef.h"
 #include <string.h>
 //===============================================
-#define UART_BUFFER_MAX (10)
-//===============================================
-static char gUart_Buffer[UART_BUFFER_MAX];
+#define BS (0x08) // Backspace
+#define CR (0x0A) // Line Feed
+#define CR (0x0D) // Carriage Return
 //===============================================
 void GUart_Init(const uint baud) {
     uint m_PRELOAD = (256 - (uchar)((((ulong)OSC_FREQ / 100) * 3125) / ((ulong)baud * OSC_PER_INST * 1000)));
@@ -22,7 +22,7 @@ void GUart_Char(const char d) {
     uchar m_data = d;
 	while (TI == 0);
 	TI = 0;
-	if(d == '\n') m_data = 13;
+	if(d == '\n') m_data = CR;
 	SBUF = m_data;
 }
 //===============================================

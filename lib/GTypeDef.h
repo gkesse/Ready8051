@@ -14,6 +14,8 @@ typedef __bit GBit;
 typedef bit GBit; 
 #endif
 //===============================================
+#define UART_NO_CHAR (127) // Delete
+//===============================================
 #ifndef TRUE
 #define FALSE (0)
 #define TRUE (!FALSE)
