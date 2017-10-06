@@ -13,13 +13,20 @@
 sbit HYBRID0 = HYBRID^0;
 sbit HYBRID1 = HYBRID^1;
 //===============================================
-#define ERROR_PORT P3
-sbit ERROR_PIN = ERROR_PORT^7;
-//===============================================
 #define LED P1
 sbit LED0 = LED^0;
 sbit LED6 = LED^6;
 sbit LED7 = LED^7;
+//===============================================
+#define KEYPAD P1
+sbit KEYPAD0 = KEYPAD^0;
+sbit KEYPAD1 = KEYPAD^1;
+sbit KEYPAD2 = KEYPAD^2;
+sbit KEYPAD3 = KEYPAD^3;
+sbit KEYPAD4 = KEYPAD^4;
+sbit KEYPAD5 = KEYPAD^5;
+sbit KEYPAD6 = KEYPAD^6;
+sbit KEYPAD7 = KEYPAD^7;
 //===============================================
 #define BUTTON P1
 sbit BUTTON0 = BUTTON^0;

@@ -15,6 +15,9 @@ typedef bit GBit;
 #endif
 //===============================================
 #define UART_NO_CHAR (127) // Delete
+#define BS (0x08) // Backspace
+#define LF (0x0A) // Line Feed
+#define CR (0x0D) // Carriage Return
 //===============================================
 #ifndef TRUE
 #define FALSE (0)
@@ -36,8 +39,10 @@ typedef bit GBit;
 #define INTERRUPT_TIMER_T1 3
 #define INTERRUPT_TIMER_T2 5
 //===============================================
-#define ERROR_OFF (1)
-#define ERROR_ON (!ERROR_OFF)
+#define INFO_OFF (1)
+#define INFO_ON (!INFO_OFF)
+#define INFO_PORT P3
+sbit INFO_PIN = INFO_PORT^7;
 //===============================================
 #define LED_OFF (1)
 #define LED_ON (!LED_OFF)
