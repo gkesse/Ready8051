@@ -36,6 +36,9 @@ typedef bit GBit;
 #define INTERRUPT_TIMER_T1 3
 #define INTERRUPT_TIMER_T2 5
 //===============================================
+#define ERROR_OFF (1)
+#define ERROR_ON (!ERROR_OFF)
+//===============================================
 #define LED_OFF (1)
 #define LED_ON (!LED_OFF)
 //===============================================

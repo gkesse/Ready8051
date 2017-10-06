@@ -13,6 +13,9 @@
 sbit HYBRID0 = HYBRID^0;
 sbit HYBRID1 = HYBRID^1;
 //===============================================
+#define ERROR_PORT P3
+sbit ERROR_PIN = ERROR_PORT^7;
+//===============================================
 #define LED P1
 sbit LED0 = LED^0;
 sbit LED6 = LED^6;

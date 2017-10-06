@@ -25,7 +25,44 @@ static uchar gUart_Read_Wait;
 static bit gUart_Write_Error;
 static bit gUart_Read_Error;
 //===============================================
+static bit gUart_Write_Buffer_Flag;
+//===============================================
 void GUart_Write_Char(const char d);
+//===============================================
+void GUart_Write_Char(const char d) {
+    uchar m_data = d;
+    ulong m_timeout1;
+    ulong m_timeout2;
+    
+    if(RI == 1) {
+        if(SBUF == XOFF) {
+            m_timeout2 = 0;
+            do {
+                RI = 0;
+                m_timeout1 = 0;
+                while((++m_timeout1 != 0) && (RI == 0));
+                
+                if(m_timeout1 == 0) {
+                    gUart_Write_Error = TRUE;
+                    ERROR_PIN = ERROR_ON;
+                    return;
+                }
+            }while((++m_timeout2 != 0) && (SBUF != XON));
+            
+            if(m_timeout2 == 0) {
+                gUart_Write_Error = TRUE;
+                ERROR_PIN = ERROR_ON;
+                return;
+            }
+        }
+        RI = 0;
+    }
+    
+    while(TI == 0);
+	TI = 0;
+	if(d == '\n') m_data = CR;
+	SBUF = m_data;
+}
 //===============================================
 void GUart_Init(const uint baud) {
     uint m_PRELOAD = (256 - (uchar)((((ulong)OSC_FREQ / 100) * 3125) / ((ulong)baud * OSC_PER_INST * 1000)));
@@ -43,6 +80,9 @@ void GUart_Init(const uint baud) {
     gUart_Read_Wait = 0;
     gUart_Write_Error = FALSE;
     gUart_Read_Error = FALSE;
+    gUart_Write_Buffer_Flag = FALSE;
+    
+    ERROR_PIN = ERROR_OFF;
 }
 //===============================================
 void GUart_Write_Char_Buffer(const char d) {
@@ -52,6 +92,7 @@ void GUart_Write_Char_Buffer(const char d) {
     }
     else {
         gUart_Write_Error = TRUE;
+        ERROR_PIN = ERROR_ON;
     }
 }
 //===============================================
@@ -62,29 +103,12 @@ void GUart_Write_Str_Buffer(const char* d) {
 	for(i = 0; i < m_length; i++) {
         GUart_Write_Char_Buffer(d[i]);
 	}
+    
+    gUart_Write_Buffer_Flag = TRUE;
 }
 //===============================================
-void GUart_Write_Char(const char d) {
-    uchar m_data = d;
-    
-    if(RI == 1) {
-        if(SBUF == XOFF) {
-            do {
-                RI = 0;
-                while(RI == 0);
-            }while(SBUF != XON);
-        }
-        RI = 0;
-    }
-    
-    while (TI == 0);
-	TI = 0;
-	if(d == '\n') m_data = CR;
-	SBUF = m_data;
-}
-//===============================================
-char GUart_Read_Char() {
-    char m_data;
+char GUart_Read_Char_Buffer() {
+    char m_data = UART_NO_CHAR;
     if(gUart_Read_Index < gUart_Read_Wait) {
         m_data = gUart_Read_Buffer[gUart_Read_Index];
         
@@ -97,12 +121,15 @@ char GUart_Read_Char() {
 //===============================================
 void GUart_Update() {
     if(gUart_Write_Index < gUart_Write_Wait) {
-        GUart_Write_Char(gUart_Write_Buffer[gUart_Write_Index]);
-        gUart_Write_Index++;
+        if(gUart_Write_Buffer_Flag == TRUE) {
+            GUart_Write_Char(gUart_Write_Buffer[gUart_Write_Index]);
+            gUart_Write_Index++;
+        }
     }
     else {
         gUart_Write_Index = 0;
         gUart_Write_Wait = 0;
+        gUart_Write_Buffer_Flag = FALSE;
     }
     
     if(RI == 1) {
