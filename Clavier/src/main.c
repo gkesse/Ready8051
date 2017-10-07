@@ -13,7 +13,7 @@ void main() {
     
     GSch_Add_Task(GUart_Update, 1, 10);
     GSch_Add_Task(GKeypad_Scan, 3, 10);
-    GSch_Add_Task(GKeypadUart_Update, 0, 200);
+    GSch_Add_Task(GKeypadUart_Update, 5, 5000);
     
     GSch_Start();
     

@@ -41,7 +41,7 @@ typedef bit GBit;
 //===============================================
 #define INFO_OFF (1)
 #define INFO_ON (!INFO_OFF)
-#define INFO_PORT P3
+#define INFO_PORT P2
 sbit INFO_PIN = INFO_PORT^7;
 //===============================================
 #define LED_OFF (1)

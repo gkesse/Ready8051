@@ -6,10 +6,10 @@
 #define XOFF (0x13) // Device Control 3
 //===============================================
 #define WRITE_BUFFER_MAX (20)
-#define READ_BUFFER_MAX (4)
+#define READ_BUFFER_MAX (2)
 //===============================================
-static char gUart_Write_Buffer[WRITE_BUFFER_MAX];
-static char gUart_Read_Buffer[READ_BUFFER_MAX];
+char gUart_Write_Buffer[WRITE_BUFFER_MAX];
+char gUart_Read_Buffer[READ_BUFFER_MAX];
 //===============================================
 static uchar gUart_Write_Index;
 static uchar gUart_Read_Index;
@@ -21,39 +21,6 @@ static bit gUart_Write_Error;
 static bit gUart_Read_Error;
 //===============================================
 void GUart_Write_Char(const char d);
-//===============================================
-void GUart_Write_Char(const char d) {
-    uchar m_data = d;
-    ulong m_timeout1;
-    ulong m_timeout2;
-    
-    if(RI == 1) {
-        if(SBUF == XOFF) {
-            m_timeout2 = 0;
-            do {
-                RI = 0;
-                m_timeout1 = 0;
-                while((++m_timeout1 != 0) && (RI == 0));
-                
-                if(m_timeout1 == 0) {
-                    gUart_Write_Error = TRUE;
-                    return;
-                }
-            }while((++m_timeout2 != 0) && (SBUF != XON));
-            
-            if(m_timeout2 == 0) {
-                gUart_Write_Error = TRUE;
-                return;
-            }
-        }
-        RI = 0;
-    }
-    
-    while(TI == 0);
-    TI = 0;
-    if(d == '\n') m_data = CR;
-    SBUF = m_data;
-}
 //===============================================
 void GUart_Init(const uint baud) {
     uint m_PRELOAD = (256 - (uchar)((((ulong)OSC_FREQ / 100) * 3125) / 
@@ -94,6 +61,45 @@ void GUart_Write_Str_Buffer(const char* d) {
     }
 }
 //===============================================
+void GUart_Write_Char(const char d) {   
+    char m_data = d;
+    ulong m_timeout1;
+    ulong m_timeout2;
+
+    if(RI == 1) {
+        if(SBUF == XOFF) {
+            m_timeout2 = 0;
+            do {
+                RI = 0;
+                m_timeout1 = 0;
+                while((++m_timeout1 != 0) && (RI == 0));
+                
+                if(m_timeout1 == 0) {
+                    gUart_Write_Error = TRUE;
+                    return;
+                }
+            }while((++m_timeout2 != 0) && (SBUF != XON));
+            
+            if(m_timeout2 == 0) {
+                gUart_Write_Error = TRUE;
+                return;
+            }
+        }
+        RI = 0;
+    }
+    
+    m_timeout1 = 0;
+    while((++m_timeout1 != 0) && (TI == 0));
+    if(m_timeout1 == 0) {
+        gUart_Write_Error = TRUE;
+        return;
+    }
+    
+    if(d == '\n') m_data = CR;
+    TI = 0;
+    SBUF = d;
+}
+//===============================================
 char GUart_Read_Char_Buffer() {
     char m_data = UART_NO_CHAR;
     if(gUart_Read_Index < gUart_Read_Wait) {
@@ -132,6 +138,3 @@ void GUart_Update() {
     }
 }
 //===============================================
-
-
-        
