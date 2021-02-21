@@ -15,7 +15,7 @@ GCFLAGS =\
     --std-c11 \
     -D $(GCOMPILER_NAME) \
 #================================================
-all: clean_exe compile hex
+all: clean compile hex
 #================================================
 # sdcc
 compile: $(GOBJS)
