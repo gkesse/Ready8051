@@ -8,13 +8,13 @@ GINCS =\
     -I$(GSRC)/include \
 #================================================
 GOBJS = \
-    $(patsubst $(GSRC)/manager/%.c, $(GBUILD)/%.rel, $(wildcard $(GSRC)/manager/*.c)) \
     $(patsubst $(GSRC)/%.c, $(GBUILD)/%.rel, $(wildcard $(GSRC)/*.c)) \
+    $(patsubst $(GSRC)/manager/%.c, $(GBUILD)/%.rel, $(wildcard $(GSRC)/manager/*.c)) \
 #================================================
 GCFLAGS =\
     --std-c11 \
 #================================================
-all: clean compile hex
+all: clean_exe compile hex
 #================================================
 # sdcc
 compile: $(GOBJS)
