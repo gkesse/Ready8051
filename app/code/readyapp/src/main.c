@@ -1,7 +1,15 @@
 //=============================================== 
+#include "GSch.h"
 #include "GProcess.h"
 //=============================================== 
 void main() {
-    GProcess_Run();
+    GSch_Init();
+    GProcess_Init("led_blink");
+    //
+    GSch_Start();
+    //
+    while(1) {
+        GSch_Dispatch_Tasks();
+    }
 }
 //=============================================== 

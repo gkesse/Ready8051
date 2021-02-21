@@ -2,12 +2,7 @@
 #include "GProcess.h"
 #include "GDelay.h"
 //===============================================
-void GProcess_Run() {
-    while(1) {
-        P1 = 0xF0; 
-        GDelay_Run();
-        P1 = 0x0F;
-        GDelay_Run();
-    }
+void GProcess_Init(const char* key) {
+
 }
 //=============================================== 
