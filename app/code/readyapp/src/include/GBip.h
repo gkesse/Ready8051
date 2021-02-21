@@ -1,13 +1,11 @@
 //===============================================
-#ifndef _GButton_
-#define _GButton_
+#ifndef _GBip_
+#define _GBip_
 //===============================================
 #include "GInclude.h"
 //===============================================
-void GButton_Init(uchar port, uchar pin);
-void GButton_Update();
-GBit GButton_Get_State();
-void GButton_Init_State();
+void GBip_Init(uchar port, uchar pin);
+void GBip_Update();
 //===============================================
 #endif
 //===============================================

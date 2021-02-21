@@ -16,11 +16,11 @@ void GButton_Init(uchar port, uchar pin) {
 void GButton_Update() {
     GBit l_button_state = GPort_Bit_Read(g_button_port, g_button_pin);
     if(l_button_state == 0) {
-        g_button_state = !g_button_state;
+        g_button_state = 1;
     }
 }
 //===============================================
-GBit GButton_Get_State() {
-    return g_button_state;
+void GButton_Init_State() {
+    g_button_state = 0;
 }
 //=============================================== 

@@ -11,6 +11,7 @@ void GProcess_Init(eGProcess key);
 enum _eGProcess {
     Led_Blink,
     Button,
+    Bip,
     Last
 };
 //===============================================
