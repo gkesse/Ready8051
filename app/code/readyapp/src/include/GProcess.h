@@ -9,8 +9,8 @@ typedef enum _eGProcess eGProcess;
 void GProcess_Init(eGProcess key);
 //===============================================
 enum _eGProcess {
-    led_blink,
-    last
+    Led_Blink,
+    Last
 };
 //===============================================
 #endif

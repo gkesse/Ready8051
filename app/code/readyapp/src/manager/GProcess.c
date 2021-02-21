@@ -3,18 +3,18 @@
 #include "GSch.h"
 #include "GLed.h"
 //===============================================
-static void GProcess_led_blink();
+static void GProcess_Led_Blink();
 //===============================================
 // public
 //===============================================
 void GProcess_Init(eGProcess key) {
-    if(key == led_blink) {GProcess_led_blink(); return;}
+    if(key == Led_Blink) {GProcess_Led_Blink(); return;}
 }
 //===============================================
 // private
 //===============================================
-void GProcess_led_blink() {
-    GLed_Init();
+static void GProcess_Led_Blink() {
+    GLed_Init(1, 7);
     GSch_Add_Task(GLed_Update, 0, 1000);
 }
 //=============================================== 
