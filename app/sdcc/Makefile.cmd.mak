@@ -11,22 +11,25 @@ GOBJS = \
     $(patsubst $(GSRC)/%.c, $(GBUILD)/%.rel, $(wildcard $(GSRC)/*.c)) \
     $(patsubst $(GSRC)/manager/%.c, $(GBUILD)/%.rel, $(wildcard $(GSRC)/manager/*.c)) \
 #================================================
-all: clean compile
+GCFLAGS =\
+    --std-c11 \
+#================================================
+all: clean compile hex
 #================================================
 # cpp
 compile: $(GOBJS)
 	@if not exist $(GBUILD) ( mkdir $(GBUILD) )
-	sdcc -o$(GTARGET_BIN) $(GOBJS) $(GLIBS)
+	cd $(GBUILD) && sdcc $(GCFLAGS) $(GOBJS) $(GLIBS)
 hex:
 	@if not exist $(GBUILD) ( mkdir $(GBUILD) )
 	@if not exist $(GBIN) ( mkdir $(GBIN) )
 	packihx $(GTARGET_GEN) > $(GTARGET_BIN)
 $(GBUILD)/%.rel: $(GSRC)/%.c
 	@if not exist $(GBUILD) ( mkdir $(GBUILD) )
-	cd $(GBUILD) && sdcc -c $< $(GINCS)
+	cd $(GBUILD) && sdcc $(GCFLAGS) -c $< $(GINCS)
 $(GBUILD)/%.rel: $(GSRC)/manager/%.c
 	@if not exist $(GBUILD) ( mkdir $(GBUILD) )
-	cd $(GBUILD) && sdcc -c $< $(GINCS)
+	cd $(GBUILD) && sdcc $(GCFLAGS) -c $< $(GINCS)
 clean_exe: 
 	@if not exist $(GBIN) ( mkdir $(GBIN) )
 	del /s /q $(GBIN)\*
