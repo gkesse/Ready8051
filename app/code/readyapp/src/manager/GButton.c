@@ -14,7 +14,10 @@ void GButton_Init(uchar port, uchar pin) {
 }
 //===============================================
 void GButton_Update() {
-    g_led_state = GPort_Bit_Read(g_button_port, g_button_pin);
+    GBit l_button_state = GPort_Bit_Read(g_button_port, g_button_pin);
+    if(l_button_state == 0) {
+        g_led_state = !g_led_state;
+    }
 }
 //===============================================
 GBit GButton_Get_State() {
