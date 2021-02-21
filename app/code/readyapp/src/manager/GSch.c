@@ -69,6 +69,7 @@ static void GSch_Update() interrupt INTERRUPT_TIMER_T2
             }
         }
     }
+    GSch_Check();
 }
 //===============================================
 static void GSch_Check() {
