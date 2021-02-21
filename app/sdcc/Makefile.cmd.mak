@@ -8,15 +8,15 @@ GINCS =\
     -I$(GSRC)/include \
 #================================================
 GOBJS = \
-    $(patsubst $(GSRC)/%.c, $(GBUILD)/%.rel, $(wildcard $(GSRC)/*.c)) \
     $(patsubst $(GSRC)/manager/%.c, $(GBUILD)/%.rel, $(wildcard $(GSRC)/manager/*.c)) \
+    $(patsubst $(GSRC)/%.c, $(GBUILD)/%.rel, $(wildcard $(GSRC)/*.c)) \
 #================================================
 GCFLAGS =\
     --std-c11 \
 #================================================
 all: clean compile hex
 #================================================
-# cpp
+# sdcc
 compile: $(GOBJS)
 	@if not exist $(GBUILD) ( mkdir $(GBUILD) )
 	cd $(GBUILD) && sdcc $(GCFLAGS) $(GOBJS) $(GLIBS)
