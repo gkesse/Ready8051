@@ -12,6 +12,8 @@ enum _eGProcess {
     Led_Blink,
     Button,
     Bip,
+    Debounce,
+    G7seg,
     Last
 };
 //===============================================

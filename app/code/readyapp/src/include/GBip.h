@@ -4,8 +4,9 @@
 //===============================================
 #include "GInclude.h"
 //===============================================
-void GBip_Init(uchar port, uchar pin);
+void GBip_Init(uchar port, uchar pin, uint time);
 void GBip_Update();
+void GBip_Update_T2();
 //===============================================
 #endif
 //===============================================

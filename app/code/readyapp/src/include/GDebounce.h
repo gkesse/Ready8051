@@ -1,13 +1,12 @@
 //===============================================
-#ifndef _GPort_
-#define _GPort_
+#ifndef _GDebounce_
+#define _GDebounce_
 //===============================================
 #include "GInclude.h"
 //===============================================
-void GPort_Data_Write(uchar port, uchar d);
-uchar GPort_Data_Read(uchar port);
-void GPort_Bit_Write(uchar port, uchar pin, GBit d);
-GBit GPort_Bit_Read(uchar port, uchar pin);
+void GDebounce_Init(uchar port, uchar pin);
+void GDebounce_Update();
+GBit GDebounce_Get_State();
 //===============================================
 #endif
 //===============================================

@@ -1,13 +1,11 @@
 //===============================================
-#ifndef _GPort_
-#define _GPort_
+#ifndef _G7seg_
+#define _G7seg_
 //===============================================
 #include "GInclude.h"
 //===============================================
-void GPort_Data_Write(uchar port, uchar d);
-uchar GPort_Data_Read(uchar port);
-void GPort_Bit_Write(uchar port, uchar pin, GBit d);
-GBit GPort_Bit_Read(uchar port, uchar pin);
+void G7seg_Init(uchar port);
+void G7seg_Update();
 //===============================================
 #endif
 //===============================================

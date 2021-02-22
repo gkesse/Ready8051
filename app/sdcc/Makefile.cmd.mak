@@ -13,9 +13,9 @@ GOBJS = \
 #================================================
 GCFLAGS =\
     --std-c11 \
-    -D$(GCOMPILER_NAME) \
+    -D $(GCOMPILER_NAME) \
 #================================================
-all: clean compile hex
+all: clean_exe compile hex
 #================================================
 # sdcc
 compile: $(GOBJS)
@@ -33,11 +33,11 @@ $(GBUILD)/%.rel: $(GSRC)/manager/%.c
 	cd $(GBUILD) && sdcc $(GCFLAGS) -c $< $(GINCS)
 clean_exe: 
 	@if not exist $(GBIN) ( mkdir $(GBIN) )
-	del /s /q $(GBIN)\*
+	del /s /q $(GTARGET_BIN)
 clean: 
 	@if not exist $(GBIN) ( mkdir $(GBIN) )
 	@if not exist $(GBUILD) ( mkdir $(GBUILD) )
-	del /s /q $(GBUILD)\*.* $(GBIN)\*.*
+	del /s /q $(GBUILD)\*.* $(GTARGET_BIN)
 #================================================
 # git
 git_status:
