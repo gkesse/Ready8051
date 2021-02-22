@@ -17,8 +17,10 @@ typedef unsigned long ulong;
 //===============================================
 #ifdef _SDCC_ /* SDCC C Compiler */
 typedef __bit GBit; 
+typedef __code uchar GCode; 
 #else /* Keil µVision C Compiler */
 typedef bit GBit; 
+typedef code uchar GCode; 
 #endif
 //===============================================
 #endif
