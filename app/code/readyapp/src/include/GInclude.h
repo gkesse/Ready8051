@@ -2,7 +2,7 @@
 #ifndef _GInclude_
 #define _GInclude_
 //===============================================
-#include <8052.h>
+#include <reg52.h>
 //===============================================
 typedef unsigned char uchar;
 typedef unsigned int uint;
