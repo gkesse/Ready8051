@@ -8,7 +8,6 @@
 #define SCH_MAX_TASKS (8)
 //===============================================
 typedef struct _sGTask sGTask;
-typedef struct _sGData sGData;
 //===============================================
 struct _sGTask {
     void (*pTask)();

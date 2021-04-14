@@ -4,18 +4,16 @@
 //===============================================
 #include "GInclude.h"
 //===============================================
-typedef enum _eGProcess eGProcess;
-//===============================================
-void GProcess_Init(eGProcess key);
-//===============================================
-enum _eGProcess {
+typedef enum {
     Led_Blink,
     Button,
     Bip,
     Debounce,
     G7seg,
     Last
-};
+} eGProcess;
+//===============================================
+void GProcess_Init(eGProcess key);
 //===============================================
 #endif
 //=============================================== 

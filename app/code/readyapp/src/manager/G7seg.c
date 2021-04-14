@@ -25,7 +25,7 @@ static void G7seg_Data_Write(uchar d) {
     uchar l_data_mask = (~l_mask) & d;
     uchar l_data_port = GPort_Data_Read(g_7seg_port);
     uchar l_port_mask = l_mask & l_data_port;
-    uchar l_data = l_data_mask `| l_port_mask;
+    uchar l_data = l_data_mask | l_port_mask;
     GPort_Data_Write(g_7seg_port, l_data);
 }
 //===============================================
