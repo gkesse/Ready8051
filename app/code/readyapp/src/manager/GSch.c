@@ -37,9 +37,9 @@ static void GSch_Delete_Task(const uchar index) {
     g_task_map[index].run_me = 0;
 }
 //===============================================
-#ifdef _SDCC_ /* SDCC C Compiler */
+#if defined(_SDCC_) /* SDCC C Compiler */
 void GSch_Update() __interrupt(INTERRUPT_TIMER_T2) 
-#else /* Keil µVision C Compiler */
+#elif defined(_KEIL_) /* Keil µVision C Compiler */
 void GSch_Update() interrupt INTERRUPT_TIMER_T2 
 #endif
 {

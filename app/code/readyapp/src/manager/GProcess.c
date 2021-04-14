@@ -52,7 +52,7 @@ static void GProcess_7seg() {
 }
 //===============================================
 static void GProcess_Uart() {
-    GUart_Init(3);
+    GUart_Init(9600);
     GSch_Add_Task(GUart_Update, 0, 500);
 }
 //=============================================== 

@@ -1,9 +1,11 @@
 //===============================================
 #include "GUart.h"
 //===============================================
+#define FACTOR (OSC_FREQ / (OSC_PER_INST * 32))
+//===============================================
 void GUart_Init(uint baud) {
-    uchar l_preload = (256 - ((OSC_FREQ) / (OSC_PER_INST * 32 * baud)));
-    TMOD |= 0x20;
+    uchar l_preload = (256 - (FACTOR / baud));
+    TMOD = 0x20;
     TH1 = l_preload;
     SCON = 0x50;
     TR1 = 1;
