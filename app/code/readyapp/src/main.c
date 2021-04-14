@@ -4,7 +4,7 @@
 //=============================================== 
 void main() {
     GSch_Init();
-    GProcess_Init(G7seg);
+    GProcess_Init(Uart);
     GSch_Start();
     while(1) {
         GSch_Dispatch_Tasks();

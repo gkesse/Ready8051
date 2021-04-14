@@ -1,36 +1,45 @@
 GSRC = $(GPROJECT_SRC)
-GBIN = $(GPROJECT_BUILD)\bin
-GBUILD = $(GPROJECT_BUILD)\build
-GTARGET_GEN = $(GBUILD)\main.ihx
-GTARGET_BIN = $(GBIN)\rd8051.hex
+GBIN = bin
+GBUILD = build
+GTARGET_BIN = $(GBIN)\rd8051
 #================================================
 GINCS =\
-    -I$(GSRC)/include \
+    $(GSRC)\include \
 #================================================
 GOBJS = \
-    $(patsubst $(GSRC)/%.c, $(GBUILD)/%.rel, $(wildcard $(GSRC)/*.c)) \
-    $(patsubst $(GSRC)/manager/%.c, $(GBUILD)/%.rel, $(wildcard $(GSRC)/manager/*.c)) \
+    $(patsubst $(GSRC)/%.c, $(GSRC)/%.obj, $(wildcard $(GSRC)/*.c)) \
+    $(patsubst $(GSRC)/manager/%.c, $(GSRC)/manager/%.obj, $(wildcard $(GSRC)/manager/*.c)) \
+#================================================
+GDIRECTIVES =\
+    debug \
+    code \
+    preprint \
+    browse \
+    optimize(8,speed) \
+#================================================
+GDEFINE =\
+    $(GCOMPILER_NAME) \
 #================================================
 GCFLAGS =\
-    --std-c11 \
-    -D $(GCOMPILER_NAME) \
+    $(GDIRECTIVES) \
+    define($(GDEFINE)) \
 #================================================
-all: clean_exe compile hex
-#================================================
-# sdcc
+# keil
+all: compile
+
 compile: $(GOBJS)
 	@if not exist $(GBUILD) ( mkdir $(GBUILD) )
-	@cd $(GBUILD) && sdcc $(GCFLAGS) $(GOBJS) $(GLIBS)
+	@echo $(GOBJS)
 hex:
 	@if not exist $(GBUILD) ( mkdir $(GBUILD) )
 	@if not exist $(GBIN) ( mkdir $(GBIN) )
 	@packihx $(GTARGET_GEN) > $(GTARGET_BIN)
-$(GBUILD)/%.rel: $(GSRC)/%.c
+$(GSRC)/%.obj: $(GSRC)/%.c
 	@if not exist $(GBUILD) ( mkdir $(GBUILD) )
-	@cd $(GBUILD) && sdcc $(GCFLAGS) -c $< $(GINCS)
-$(GBUILD)/%.rel: $(GSRC)/manager/%.c
+	@cd $(GBUILD) && c51 $< $(GDIRECTIVES) incdir($(GINCS)) define($(GDEFINE))
+$(GSRC)/manager/%.obj: $(GSRC)/manager/%.c
 	@if not exist $(GBUILD) ( mkdir $(GBUILD) )
-	@cd $(GBUILD) && sdcc $(GCFLAGS) -c $< $(GINCS)
+	@cd $(GBUILD) && c51 $< $(GDIRECTIVES) incdir($(GINCS)) define($(GDEFINE))
 clean_exe: 
 	@if not exist $(GBIN) ( mkdir $(GBIN) )
 	@del /s /q $(GTARGET_BIN)

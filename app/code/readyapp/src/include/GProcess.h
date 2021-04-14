@@ -10,6 +10,7 @@ typedef enum {
     Bip,
     Debounce,
     G7seg,
+    Uart,
     Last
 } eGProcess;
 //===============================================
