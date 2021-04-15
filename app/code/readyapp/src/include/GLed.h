@@ -4,8 +4,8 @@
 //===============================================
 #include "GInclude.h"
 //===============================================
-void GLed_Init(uchar port, uchar pin);
-void GLed_Update();
+void GLed_Flash_Init(uchar port, uchar pin);
+void GLed_Flash_Update();
 //===============================================
 #endif
 //===============================================

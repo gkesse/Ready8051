@@ -25,7 +25,7 @@ void GBip_Update() {
     if(g_bip_flag == 0) {GPort_Bit_Write(g_bip_port, g_bip_pin, 1);}
 }
 //===============================================
-void GBip_Update_T2() {
+void GBip_Update_2() {
     if(g_bip_flag == 0) {return;}
     g_bip_state = !g_bip_state;
     GPort_Bit_Write(g_bip_port, g_bip_pin, g_bip_state);

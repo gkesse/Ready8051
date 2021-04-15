@@ -5,7 +5,9 @@
 #include "GInclude.h"
 //===============================================
 typedef enum {
-    Led_Blink,
+    Led_Flash,
+    Led_Count,
+    Led_Direction,
     Button,
     Bip,
     Debounce,

@@ -6,11 +6,23 @@
 #define PORT_2 P2
 #define PORT_3 P3
 //===============================================
+#define LED_ON (0)
+#define LED_OFF (!LED_ON)
+//===============================================
 void GPort_Data_Write(uchar port, uchar d) {
     if(port == 0) {PORT_0 = d;}
     else if(port == 1) {PORT_1 = d;}
     else if(port == 2) {PORT_2 = d;}
     else if(port == 3) {PORT_3 = d;}
+}
+//===============================================
+void GPort_Data_Shift(uchar port, uchar d, char offset) {
+    char l_pin_count;
+    for(l_pin_count = offset; l_pin_count < d + offset; l_pin_count++) {
+        if(l_pin_count < 0) {continue;}
+        if(l_pin_count > 7) {continue;}
+        GPort_Bit_Write(port, l_pin_count, LED_ON);
+    }
 }
 //===============================================
 uchar GPort_Data_Read(uchar port) {
