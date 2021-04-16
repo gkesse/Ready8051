@@ -1,7 +1,7 @@
 # Auteur
 
 Je suis 
-[Gerard KESSE](http://readydev.ovh/presentation/ "Accédez à mon site web (ReadyDev)"),  
+[Gerard KESSE](http://readydev.ovh/Presentation/ "Accédez à mon site web (ReadyDev)"),  
 Ingénieur en Développement Informatique C/C++/Qt,  
 Avec à la fois des compétences en Systèmes Embarqués et en Robotique.  
 
