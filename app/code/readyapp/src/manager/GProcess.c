@@ -45,7 +45,7 @@ static void GProcess_Led_Count() {
 static void GProcess_Led_Direction() {
     GLed_Direction_Init(1, 3, -3);
     GSch_Add_Task(GLed_Direction_Update, 0, 500);
-    GSch_Add_Task(GLed_Direction_Update_2, 3023, 500);
+    GSch_Add_Task(GLed_Direction_Update_2, 3007, 500);
 }
 //===============================================
 static void GProcess_Button() {

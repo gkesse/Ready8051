@@ -30,8 +30,7 @@ void GLed_Direction_Update() {
 }
 //===============================================
 void GLed_Direction_Update_2() {
-    GPort_Data_Write(1, PORT_OFF);
-    GPort_Data_Shift(1, g_led_size, g_led_count_2);
+    GPort_Data_Shift(g_led_port, g_led_size, g_led_count_2);
     if(++g_led_count_2 > 7) {g_led_count_2 = g_led_offset_2;}
 }
 //===============================================
