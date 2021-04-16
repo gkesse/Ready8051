@@ -13,16 +13,14 @@ static char g_led_count;
 static char g_led_offset;
 static char g_led_count_2;
 static char g_led_offset_2;
-static char g_led_time_2;
 //===============================================
 void GLed_Direction_Init(uchar port, uchar size, char offset) {
     g_led_port = port;
     g_led_size = size;
     g_led_offset = offset;
     g_led_count = g_led_offset;
-    g_led_offset_2 = offset;
-    g_led_count_2 = g_led_offset_2;
-    g_led_time_2 = 0;
+    g_led_offset_2 = g_led_offset;
+    g_led_count_2 = g_led_offset;
 }
 //===============================================
 void GLed_Direction_Update() {
@@ -32,7 +30,8 @@ void GLed_Direction_Update() {
 }
 //===============================================
 void GLed_Direction_Update_2() {
-    GPort_Data_Shift(g_led_port, g_led_size, g_led_count_2);
+    GPort_Data_Write(1, PORT_OFF);
+    GPort_Data_Shift(1, g_led_size, g_led_count_2);
     if(++g_led_count_2 > 7) {g_led_count_2 = g_led_offset_2;}
 }
 //===============================================

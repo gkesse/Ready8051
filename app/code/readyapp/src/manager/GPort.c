@@ -37,10 +37,10 @@ uchar GPort_Data_Read(uchar port) {
 void GPort_Bit_Write(uchar port, uchar pin, GBit d) {
     uchar l_mask = 0x01;
     l_mask <<= pin;
-    if(port == 0) {PORT_0 = (d == 0) ? (PORT_0 & ~l_mask) : (PORT_0 | l_mask);}
-    else if(port == 1) {PORT_1 = (d == 0) ? (PORT_1 & ~l_mask) : (PORT_1 | l_mask);}
-    else if(port == 2) {PORT_2 = (d == 0) ? (PORT_2 & ~l_mask) : (PORT_2 | l_mask);}
-    else if(port == 3) {PORT_3 = (d == 0) ? (PORT_3 & ~l_mask) : (PORT_3 | l_mask);}
+    if(port == 0) {PORT_0 = (d == 0) ? (PORT_0 & (~l_mask)) : (PORT_0 | l_mask);}
+    else if(port == 1) {PORT_1 = (d == 0) ? (PORT_1 & (~l_mask)) : (PORT_1 | l_mask);}
+    else if(port == 2) {PORT_2 = (d == 0) ? (PORT_2 & (~l_mask)) : (PORT_2 | l_mask);}
+    else if(port == 3) {PORT_3 = (d == 0) ? (PORT_3 & (~l_mask)) : (PORT_3 | l_mask);}
 }
 //=============================================== 
 GBit GPort_Bit_Read(uchar port, uchar pin) {
