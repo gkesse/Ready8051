@@ -13,6 +13,20 @@ Avec à la fois des compétences en Systèmes Embarqués et en Robotique.
 # Exemples d'utilisation
 * [Programmation système embarqué avec le 8051](https://readydev.ovh/Tutoriels/Embedded_System/8051/ "Programmation système embarqué avec le 8051")  
 
+# Time-triggered architecture
+
+L'architecture déclenchée par le temps (en abrégé TTA ), 
+également connue sous le nom de système déclenché par le temps , 
+est un système informatique qui exécute un ou plusieurs ensembles de tâches 
+selon un ordonnancement de tâches prédéterminé et défini. 
+La mise en œuvre d'un système TTA impliquera généralement 
+l'utilisation d'une seule interruption 
+liée au débordement périodique d'un temporisateur. 
+Cette interruption peut entraîner un ordonnanceur de tâches, 
+une forme restreinte de système RTOS (système d'exploitation en temps réel). 
+L'ordonnanceur à son tour libère les tâches système à des moments prédéterminés 
+dans le temps.
+
 # Technologies
 
 Environnement de développement :
