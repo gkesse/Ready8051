@@ -10,6 +10,7 @@ typedef enum {
     Led_Direction,
     Button,
     Button_Bip,
+    Button_Switch,
     G7seg,
     Uart,
     Last

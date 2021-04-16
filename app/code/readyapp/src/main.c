@@ -4,7 +4,7 @@
 //=============================================== 
 void main() {
     GSch_Init();
-    GProcess_Init(Button_Bip);
+    GProcess_Init(Button_Switch);
     GSch_Start();
     while(1) {
         GSch_Dispatch_Tasks();

@@ -7,6 +7,7 @@
 #include "GLed_Button.h"
 #include "GButton.h"
 #include "GButton_Bip.h"
+#include "GButton_Switch.h"
 #include "G7seg.h"
 #include "GUart.h"
 //===============================================
@@ -15,6 +16,7 @@ static void GProcess_Led_Count();
 static void GProcess_Led_Direction();
 static void GProcess_Button();
 static void GProcess_Button_Bip();
+static void GProcess_Button_Switch();
 static void GProcess_7seg();
 static void GProcess_Uart();
 //===============================================
@@ -26,6 +28,7 @@ void GProcess_Init(eGProcess key) {
     if(key == Led_Direction) {GProcess_Led_Direction(); return;}
     if(key == Button) {GProcess_Button(); return;}
     if(key == Button_Bip) {GProcess_Button_Bip(); return;}
+    if(key == Button_Switch) {GProcess_Button_Switch(); return;}
     if(key == G7seg) {GProcess_7seg(); return;}
     if(key == Uart) {GProcess_Uart(); return;}
 }
@@ -61,6 +64,12 @@ static void GProcess_Button_Bip() {
     GSch_Add_Task(GButton_Read_Update, 0, 200);
     GSch_Add_Task(GButton_Bip_Read_Update, 3, 200);
     GSch_Add_Task(GButton_Bip_Flash_Update, 5, 200);
+}
+//===============================================
+static void GProcess_Button_Switch() {
+    GButton_Switch_Init(3, 1);
+    GSch_Add_Task(GButton_Switch_Read_Update, 0, 200);
+    GSch_Add_Task(GButton_Switch_Write_Update, 3, 200);
 }
 //===============================================
 static void GProcess_7seg() {
