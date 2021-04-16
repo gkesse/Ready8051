@@ -9,8 +9,7 @@ typedef enum {
     Led_Count,
     Led_Direction,
     Button,
-    Bip,
-    Debounce,
+    Button_Bip,
     G7seg,
     Uart,
     Last

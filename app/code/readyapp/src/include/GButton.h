@@ -5,9 +5,9 @@
 #include "GInclude.h"
 //===============================================
 void GButton_Init(uchar port, uchar pin);
-void GButton_Update();
-GBit GButton_Get_State();
-void GButton_Init_State();
+void GButton_Read_Update();
+GBit GButton_State_Get();
+void GButton_State_Init();
 //===============================================
 #endif
 //===============================================

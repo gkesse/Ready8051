@@ -1,12 +1,11 @@
 //===============================================
-#ifndef _GBip_
-#define _GBip_
+#ifndef _GLed_Button_
+#define _GLed_Button_
 //===============================================
 #include "GInclude.h"
 //===============================================
-void GBip_Init(uchar port, uchar pin, uint time);
-void GBip_Update();
-void GBip_Update_2();
+void GLed_Button_Init(uchar port, uchar pin);
+void GLed_Button_Update();
 //===============================================
 #endif
 //===============================================
