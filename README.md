@@ -1,3 +1,7 @@
+# Ready8051
+
+Bibliothèque de fonction C pour le développement de système embarqué mutlitâche temps réel sur des microcontrôleurs de la famille 8051
+
 # Auteur
 
 Je suis 
