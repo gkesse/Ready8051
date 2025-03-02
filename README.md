@@ -4,17 +4,13 @@ Bibliothèque de fonction C pour le développement de système embarqué mutlit�
 
 # Auteur
 
-Je suis 
-[Gerard KESSE](http://readydev.ovh/Presentation/ "Accédez à mon site web (ReadyDev)"),  
+Je suis **Gerard KESSE**,  
 Ingénieur en Développement Informatique C/C++/Qt,  
 Avec à la fois des compétences en Systèmes Embarqués et en Robotique.  
 
 * Site Web : [ReadyDev](https://readydev.ovh/home/ "Accédez à mon site web (ReadyDev)")
 * Contact : [LinkedIn](https://www.linkedin.com/in/tia-gerard-kesse/ "Envoyez-moi un message sur (LinkedIn)")
 * Localité : **Strasbourg - France**
-
-# Exemples d'utilisation
-* [Programmation système embarqué avec le 8051](https://readydev.ovh/Tutoriels/Embedded_System/8051/ "Programmation système embarqué avec le 8051")  
 
 # Time-triggered architecture
 
