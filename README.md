@@ -1,43 +1,42 @@
 # Ready8051
 
-Bibliothèque de fonction C pour le développement de système embarqué mutlitâche temps réel sur des microcontrôleurs de la famille 8051
+BibliothÃ¨que de fonction C pour le dÃ©veloppement de systÃ¨me embarquÃ© mutlitÃ¢che temps rÃ©el sur des microcontrÃ´leurs de la famille 8051
 
 # Auteur
 
 Je suis 
-[Gerard KESSE](http://readydev.ovh/Presentation/ "Accédez à mon site web (ReadyDev)"),  
-Ingénieur en Développement Informatique C/C++/Qt,  
-Avec à la fois des compétences en Systèmes Embarqués et en Robotique.  
+[Gerard KESSE](http://readydev.ovh/Presentation/ "AccÃ©dez Ã  mon site web (ReadyDev)"),  
+IngÃ©nieur en DÃ©veloppement Informatique C/C++/Qt,  
+Avec Ã  la fois des compÃ©tences en SystÃ¨mes EmbarquÃ©s et en Robotique.  
 
-* Site Web : [ReadyDev](http://readydev.ovh "Accédez à mon site web (ReadyDev)")
-* Email : [tiakagerard@hotmail.com](mailto:tiakagerard@hotmail.com?subject=Contact&body=Bonjour "Me contactez par email")
-* Tel : [(+33) 06.58.77.23.97](tel:00330658772397 "Contactez-moi")
-* Localité : **Strasbourg - France**
+* Site Web : [ReadyDev](https://readydev.ovh/home/ "AccÃ©dez Ã  mon site web (ReadyDev)")
+* Contact : [LinkedIn](https://www.linkedin.com/in/tia-gerard-kesse/ "Envoyez-moi un message sur (LinkedIn)")
+* LocalitÃ© : **Strasbourg - France**
 
 # Exemples d'utilisation
-* [Programmation système embarqué avec le 8051](https://readydev.ovh/Tutoriels/Embedded_System/8051/ "Programmation système embarqué avec le 8051")  
+* [Programmation systÃ¨me embarquÃ© avec le 8051](https://readydev.ovh/Tutoriels/Embedded_System/8051/ "Programmation systÃ¨me embarquÃ© avec le 8051")  
 
 # Time-triggered architecture
 
-L'architecture déclenchée par le temps (en abrégé TTA ), 
-également connue sous le nom de système déclenché par le temps , 
-est un système informatique qui exécute un ou plusieurs ensembles de tâches 
-selon un ordonnancement de tâches prédéterminé et défini. 
-La mise en œuvre d'un système TTA impliquera généralement 
+L'architecture dÃ©clenchÃ©e par le temps (en abrÃ©gÃ© TTA ), 
+Ã©galement connue sous le nom de systÃ¨me dÃ©clenchÃ© par le temps , 
+est un systÃ¨me informatique qui exÃ©cute un ou plusieurs ensembles de tÃ¢ches 
+selon un ordonnancement de tÃ¢ches prÃ©dÃ©terminÃ© et dÃ©fini. 
+La mise en Å“uvre d'un systÃ¨me TTA impliquera gÃ©nÃ©ralement 
 l'utilisation d'une seule interruption 
-liée au débordement périodique d'un temporisateur. 
-Cette interruption peut entraîner un ordonnanceur de tâches, 
-une forme restreinte de système RTOS (système d'exploitation en temps réel). 
-L'ordonnanceur à son tour libère les tâches système à des moments prédéterminés 
+liÃ©e au dÃ©bordement pÃ©riodique d'un temporisateur. 
+Cette interruption peut entraÃ®ner un ordonnanceur de tÃ¢ches, 
+une forme restreinte de systÃ¨me RTOS (systÃ¨me d'exploitation en temps rÃ©el). 
+L'ordonnanceur Ã  son tour libÃ¨re les tÃ¢ches systÃ¨me Ã  des moments prÃ©dÃ©terminÃ©s 
 dans le temps.
 
 # Technologies
 
-Environnement de développement :
+Environnement de dÃ©veloppement :
 
 * Langage: **C**
-* Microcontrôleur 8051: **AT89C52**
-* IDE & Compilateur 8051: **Keil µVision**
+* MicrocontrÃ´leur 8051: **AT89C52**
+* IDE & Compilateur 8051: **Keil ÂµVision**
 * Compilateur 8051: **SDDC**
 * Editeur de Texte: **Notepad++**
 * Simulateur de Circuit Electrique: **Proteus**
